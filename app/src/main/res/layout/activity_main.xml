@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#046E3E"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="16dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="128dp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="219dp">
+
+            <com.saunakpatel.pokercardgame.PokerCards
+                android:id="@+id/PC1"
+                android:layout_width="141dp"
+                android:layout_height="match_parent" />
+
+            <com.saunakpatel.pokercardgame.PokerCards
+                android:id="@+id/PC2"
+                android:layout_width="150dp"
+                android:layout_height="match_parent" />
+
+            <com.saunakpatel.pokercardgame.PokerCards
+                android:id="@+id/PC3"
+                android:layout_width="117dp"
+                android:layout_height="match_parent" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="379dp"
+            android:layout_height="149dp">
+
+            <Space
+                android:layout_width="56dp"
+                android:layout_height="wrap_content" />
+
+            <com.saunakpatel.pokercardgame.PokerCards
+                android:id="@+id/PC4"
+                android:layout_width="165dp"
+                android:layout_height="match_parent" />
+
+            <com.saunakpatel.pokercardgame.PokerCards
+                android:id="@+id/PC5"
+                android:layout_width="173dp"
+                android:layout_height="match_parent" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="182dp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Space
+                android:layout_width="133dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/dealBtn"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Deal" />
+        </TableRow>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
