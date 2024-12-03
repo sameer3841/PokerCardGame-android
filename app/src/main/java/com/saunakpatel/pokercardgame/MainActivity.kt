@@ -1,11 +1,8 @@
 package com.saunakpatel.pokercardgame
 
 import android.os.Bundle
-import android.view.ViewGroup
 import android.widget.Button
-import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
-import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var dealBtn: Button
 
     private val arr = ArrayList<PokerCards>()
-    private val dealtCards = mutableSetOf<Pair<PokerCards.Suit, PokerCards.Rank>>()
+    private val dealtCards = mutableSetOf<Int>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,17 +47,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun generate(card: PokerCards){
-        var suitNum: Int
-        var rankNum: Int
+        var num: Int
         var newCard: Pair<PokerCards.Suit, PokerCards.Rank>
-
         do {
-            suitNum = (0..3).random()
-            rankNum = (0..12).random()
-            newCard = PokerCards.Suit.entries[suitNum] to PokerCards.Rank.entries[rankNum]
-        } while (dealtCards.contains(newCard))
+            num = (0..51).random()
+            newCard = PokerCards.Suit.entries[num/13] to PokerCards.Rank.entries[num%13]
+        } while (dealtCards.contains(num))
 
-        dealtCards.add(newCard)
+        dealtCards.add(num)
 
         card.drawCardSuit = newCard.first
         card.drawCardRank = newCard.second
