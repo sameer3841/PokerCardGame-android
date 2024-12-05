@@ -18,7 +18,7 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="128dp" />
+            android:layout_height="56dp" />
 
         <TableRow
             android:layout_width="match_parent"
@@ -26,12 +26,12 @@
 
             <com.saunakpatel.pokercardgame.PokerCards
                 android:id="@+id/PC1"
-                android:layout_width="141dp"
+                android:layout_width="149dp"
                 android:layout_height="match_parent" />
 
             <com.saunakpatel.pokercardgame.PokerCards
                 android:id="@+id/PC2"
-                android:layout_width="150dp"
+                android:layout_width="139dp"
                 android:layout_height="match_parent" />
 
             <com.saunakpatel.pokercardgame.PokerCards
@@ -62,7 +62,21 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="182dp" />
+            android:layout_height="219dp" >
+
+            <TextView
+                android:id="@+id/resultText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="cursive"
+                android:gravity="center"
+                android:text="Click Deal Button"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#673AB7"
+                android:textFontWeight="800"
+                android:textSize="40sp" />
+        </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
